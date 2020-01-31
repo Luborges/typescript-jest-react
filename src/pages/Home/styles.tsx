@@ -4,10 +4,11 @@ export const Container = styled.div`
     background:rgba(58,63,68,0.5);
     border-radius: 5px;
     box-shadow: 0 1.5px 0 0 rgba(0,0,0,0.1);
-    width:450px;
+    width: 100%;
+    margin: 2% 3% 2% 3%;
     display: flex;  
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
 `;
 
