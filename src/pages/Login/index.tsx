@@ -7,7 +7,7 @@ import {
     Label,
     TextEnter,
     Title
-} from './login-style';
+} from './styles';
 
 const Login:FunctionComponent<{ initialEmail?: string, initialPassword?: string }> = ({ initialEmail = '', initialPassword = '' }) => {
   const [email, setEmail] = useState(initialEmail);
@@ -17,20 +17,12 @@ const Login:FunctionComponent<{ initialEmail?: string, initialPassword?: string 
         evt.preventDefault();
         
         
-        if (email==='email@dominio.com' && password === 'pass'){
-            console.log('correct pass');
-            window.location.assign('/logged');
+        if (email==='email@domain.com' && password === 'pass'){
+            window.location.assign('/home');
         }
         else{
             console.log('incorrect pass');
         }
-
-        //const response = await api.post('/sessions', {email});
-        //const { _id } = response.data;
-
-        //localStorage.setItem('user', _id);
-
-        //history.push('/dashboard');
     }
 
     return (
