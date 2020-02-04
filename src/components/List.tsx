@@ -1,7 +1,7 @@
 import React, { FunctionComponent, useState } from 'react';
 import { 
     ListBox,
-    ListNewInput,
+    ItemInput,
     ListInput,
     CreateItem
 } from './styles';
@@ -38,11 +38,11 @@ const TodoList:FunctionComponent<{
         <ListBox>
             <ListInput onChange={evt => changeListName(evt)} value={listName} />
             {
-                itemsList.map((item, i) => <ListInput key={'item-'+i} className='items'
+                itemsList.map((item, i) => <ItemInput key={'item-'+i} className='items'
                     onChange={evt => changeItemName(evt, i)} value={item} />)
             }
             {itemName !== null && itemName !== undefined &&
-                    <ListNewInput id='input-new-item'
+                    <ItemInput id='input-new-item'
                         onChange={evt => setItemName(evt.target.value)} onBlur={() => createItem()} />
                 }
                 <br />
@@ -50,7 +50,5 @@ const TodoList:FunctionComponent<{
         </ListBox>
     )
 }
-
-// <ItemContainer value={item} />
 
 export default TodoList;

@@ -4,9 +4,10 @@ import {
     Title,
     ListContext,
     CreateList,
-    ListNewInput,
+    ListInput,
     ListContainer,
-    WrapperList
+    WrapperList,
+    InputBox
 } from './styles';
 
 const TodoList:FunctionComponent<{ initialListName?: string, initialLists?: Array<any> }> = ( { initialListName = null, initialLists = [] } ) => {
@@ -36,8 +37,11 @@ const TodoList:FunctionComponent<{ initialListName?: string, initialLists?: Arra
                 }
                 {
                 listName !== null && listName !== undefined &&
-                    <ListNewInput id='input-new-list'
-                        onChange={evt => setListName(evt.target.value)} onBlur={() => createList()} />
+                    <InputBox>
+                        <ListInput id='input-new-list'
+                            onChange={evt => setListName(evt.target.value)} 
+                            onBlur={() => createList()} />
+                    </InputBox>
                 }
             </WrapperList>
         </ListContext>

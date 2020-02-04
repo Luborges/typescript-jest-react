@@ -6,11 +6,10 @@ export const Wrap = styled.div`
 
 export const Container = styled.div`
     border-radius: 5px;
-    box-shadow: 0 1.5px 0 0 rgba(0,0,0,0.1);
     min-width: 450px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
 `;
 
